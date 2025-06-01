@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="shortcut icon" href="../images/corazon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../css/registro.css">
+  <link rel="stylesheet" href="../css/normalize-La%20vida%20es%20una%20mierda%20maravillosa.css">
+</head>
+<body>
+
+<section class="main">
+
+  <figure class="main__figure">
+    <img src="../images/fondo.jpg" class="main__img" alt="Фоновое изображение">
+  </figure>
+
+  <div class="main__contact">
+
+    <h2 class="main__title">Зарегистрироваться</h2>
+    <p class="main__paragraph">Заполните форму для создания аккаунта</p>
+
+    <form class="main__form" action="/registro" method="post">
+      <input type="text" id="username" name="username" placeholder="Имя пользователя" class="main__input" required>
+      <input type="text" id="firstName" name="firstName" placeholder="Имя" class="main__input" required>
+      <input type="text" id="lastName" name="lastName" placeholder="Фамилия" class="main__input" required>
+      <input type="email" id="email" name="email" placeholder="Электронная почта" class="main__input" required>
+      <input type="password" id="password" name="password" placeholder="Пароль" class="main__input" required>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Подтвердите пароль" class="main__input" required>
+
+      <input type="submit" value="Зарегистрироваться" class="main__input main__input--send">
+    </form>
+
+
+    <p class="main__paragraph">Уже есть аккаунт?
+      <a href="../html/inicio.html" class="main__link">Войдите здесь</a>
+    </p>
+
+  </div>
+
+</section>
+
+</body>
+</html>

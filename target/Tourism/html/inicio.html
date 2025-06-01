@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему</title>
+    <link rel="shortcut icon" href="../images/corazon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/normalize-La%20vida%20es%20una%20mierda%20maravillosa.css">
+</head>
+<body>
+
+<section class="main">
+
+    <figure class="main__figure">
+        <img src="../images/fondo.jpg" class="main__img" alt="Фоновое изображение">
+    </figure>
+
+    <div class="main__contact">
+
+        <h2 class="main__title">ПоехалиРус</h2>
+
+        <form class="main__form" action="/login" method="post">
+            <input type="text" id="username" name="username" placeholder="Имя пользователя" class="main__input" required>
+            <input type="password" id="password" name="password" placeholder="Пароль" class="main__input" required>
+
+            <input type="submit" value="Войти" class="main__input main__input--send">
+        </form>
+
+        <p class="main__paragraph">Нет аккаунта?
+            <a href="../html/registro.html" class="main__link">Зарегистрируйтесь здесь</a>
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>

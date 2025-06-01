@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интерактивная карта и игры - ПоехалиРус</title>
+  <link rel="shortcut icon" href="ruta/a/tu/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/mapa.css">
+</head>
+
+<body>
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-spinner"></div>
+</div>
+
+<header class="hero hero--interactive">
+  <nav class="nav container">
+    <div class="nav__logo">
+      <h2 class="nav__title">ПоехалиРус</h2>
+    </div>
+
+    <ul class="nav__link nav__link--menu">
+      <li class="nav__items">
+        <a href="../html/inicio.html" class="nav__links">Войти</a>
+      </li>
+      <li class="nav__items">
+        <a href="../index.jsp" class="nav__links">Главная</a>
+      </li>
+      <li class="nav__items">
+        <a href="../html/about.html" class="nav__links">О нас</a>
+      </li>
+      <li class="nav__items">
+        <a href="../html/contactos.html" class="nav__links">Контакты</a>
+      </li>
+      <li class="nav__items">
+        <a href="../html/Tours.html" class="nav__links">Туры</a>
+      </li>
+    </ul>
+
+    <svg class="nav__close" id="navClose" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+
+    <div class="nav__menu" id="navToggle">
+      <svg class="nav__img" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </div>
+  </nav>
+
+  <section class="hero__container container">
+    <h1 class="hero__title">Интерактивная карта мира</h1>
+    <p class="hero__paragraph">Исследуйте наши направления на интерактивной карте с возможностью поиска, фильтрации и детального изучения каждой страны. Подготовьтесь к путешествию с помощью увлекательной игры "Собери чемодан"!</p>
+    <a href="#map" class="cta">Исследовать карту</a>
+  </section>
+</header>
+
+<main>
+  <!-- Enhanced Interactive Map Section -->
+  <section id="map" class="map-section">
+    <div class="container">
+      <h2 class="subtitle">Интерактивная карта наших направлений</h2>
+      <p class="about__paragraph">Откройте для себя 40+ удивительных направлений по всему миру. Используйте фильтры по континентам или поиск для быстрого поиска нужной страны.</p>
+
+      <!-- Map Controls -->
+      <div class="map-controls">
+        <div class="continent-filter active" data-continent="all">Все страны</div>
+        <div class="continent-filter" data-continent="europe">Европа</div>
+        <div class="continent-filter" data-continent="asia">Азия</div>
+        <div class="continent-filter" data-continent="america">Америка</div>
+        <div class="continent-filter" data-continent="africa">Африка</div>
+        <div class="continent-filter" data-continent="oceania">Океания</div>
+        <input type="text" class="map-search" id="countrySearch" placeholder="🔍 Поиск страны...">
+      </div>
+
+      <div class="map-container">
+        <div class="world-map">
+          <!-- Zoom Controls -->
+          <div class="map-zoom-controls">
+            <button class="zoom-btn" id="zoomIn">+</button>
+            <button class="zoom-btn" id="zoomOut">−</button>
+            <button class="zoom-btn" id="resetZoom">⌂</button>
+          </div>
+
+          <div class="world-map-container" id="mapContainer">
+            <!-- Europe -->
+            <div class="country-pin featured" data-country="france" data-continent="europe" style="top: 25%; left: 48%;">
+              <div class="pin">🇫🇷</div>
+              <div class="country-tooltip">Франция</div>
+            </div>
+            <div class="country-pin" data-country="italy" data-continent="europe" style="top: 30%; left: 52%;">
+              <div class="pin">🇮🇹</div>
+              <div class="country-tooltip">Италия</div>
+            </div>
+            <div class="country-pin" data-country="spain" data-continent="europe" style="top: 32%; left: 45%;">
+              <div class="pin">🇪🇸</div>
+              <div class="country-tooltip">Испания</div>
+            </div>
+            <div class="country-pin" data-country="greece" data-continent="europe" style="top: 35%; left: 55%;">
+              <div class="pin">🇬🇷</div>
+              <div class="country-tooltip">Греция</div>
+            </div>
+            <div class="country-pin" data-country="norway" data-continent="europe" style="top: 15%; left: 52%;">
+              <div class="pin">🇳🇴</div>
+              <div class="country-tooltip">Норвегия</div>
+            </div>
+            <div class="country-pin" data-country="iceland" data-continent="europe" style="top: 18%; left: 42%;">
+              <div class="pin">🇮🇸</div>
+              <div class="country-tooltip">Исландия</div>
+            </div>
+            <div class="country-pin" data-country="sweden" data-continent="europe" style="top: 18%; left: 54%;">
+              <div class="pin">🇸🇪</div>
+              <div class="country-tooltip">Швеция</div>
+            </div>
+            <div class="country-pin" data-country="finland" data-continent="europe" style="top: 16%; left: 58%;">
+              <div class="pin">🇫🇮</div>
+              <div class="country-tooltip">Финляндия</div>
+            </div>
+            <div class="country-pin" data-country="denmark" data-continent="europe" style="top: 22%; left: 52%;">
+              <div class="pin">🇩🇰</div>
+              <div class="country-tooltip">Дания</div>
+            </div>
+            <div class="country-pin" data-country="netherlands" data-continent="europe" style="top: 26%; left: 50%;">
+              <div class="pin">🇳🇱</div>
+              <div class="country-tooltip">Нидерланды</div>
+            </div>
+            <div class="country-pin" data-country="belgium" data-continent="europe" style="top: 27%; left: 49%;">
+              <div class="pin">🇧🇪</div>
+              <div class="country-tooltip">Бельгия</div>
+            </div>
+            <div class="country-pin" data-country="switzerland" data-continent="europe" style="top: 29%; left: 51%;">
+              <div class="pin">🇨🇭</div>
+              <div class="country-tooltip">Швейцария</div>
+            </div>
+            <div class="country-pin" data-country="austria" data-continent="europe" style="top: 30%; left: 54%;">
+              <div class="pin">🇦🇹</div>
+              <div class="country-tooltip">Австрия</div>
+            </div>
+            <div class="country-pin" data-country="czech" data-continent="europe" style="top: 28%; left: 54%;">
+              <div class="pin">🇨🇿</div>
+              <div class="country-tooltip">Чехия</div>
+            </div>
+            <div class="country-pin" data-country="hungary" data-continent="europe" style="top: 31%; left: 56%;">
+              <div class="pin">🇭🇺</div>
+              <div class="country-tooltip">Венгрия</div>
+            </div>
+            <div class="country-pin" data-country="poland" data-continent="europe" style="top: 26%; left: 56%;">
+              <div class="pin">🇵🇱</div>
+              <div class="country-tooltip">Польша</div>
+            </div>
+            <div class="country-pin" data-country="croatia" data-continent="europe" style="top: 33%; left: 54%;">
+              <div class="pin">🇭🇷</div>
+              <div class="country-tooltip">Хорватия</div>
+            </div>
+            <div class="country-pin" data-country="portugal" data-continent="europe" style="top: 34%; left: 43%;">
+              <div class="pin">🇵🇹</div>
+              <div class="country-tooltip">Португалия</div>
+            </div>
+            <div class="country-pin" data-country="ireland" data-continent="europe" style="top: 24%; left: 44%;">
+              <div class="pin">🇮🇪</div>
+              <div class="country-tooltip">Ирландия</div>
+            </div>
+            <div class="country-pin" data-country="scotland" data-continent="europe" style="top: 22%; left: 46%;">
+              <div class="pin">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+              <div class="country-tooltip">Шотландия</div>
+            </div>
+
+            <!-- Asia -->
+            <div class="country-pin featured" data-country="japan" data-continent="asia" style="top: 28%; left: 85%;">
+              <div class="pin">🇯🇵</div>
+              <div class="country-tooltip">Япония</div>
+            </div>
+            <div class="country-pin" data-country="china" data-continent="asia" style="top: 25%; left: 75%;">
+              <div class="pin">🇨🇳</div>
+              <div class="country-tooltip">Китай</div>
+            </div>
+            <div class="country-pin" data-country="thailand" data-continent="asia" style="top: 40%; left: 75%;">
+              <div class="pin">🇹🇭</div>
+              <div class="country-tooltip">Таиланд</div>
+            </div>
+            <div class="country-pin" data-country="india" data-continent="asia" style="top: 38%; left: 70%;">
+              <div class="pin">🇮🇳</div>
+              <div class="country-tooltip">Индия</div>
+            </div>
+            <div class="country-pin" data-country="turkey" data-continent="asia" style="top: 32%; left: 58%;">
+              <div class="pin">🇹🇷</div>
+              <div class="country-tooltip">Турция</div>
+            </div>
+            <div class="country-pin" data-country="maldives" data-continent="asia" style="top: 45%; left: 68%;">
+              <div class="pin">🇲🇻</div>
+              <div class="country-tooltip">Мальдивы</div>
+            </div>
+
+            <!-- Americas -->
+            <div class="country-pin" data-country="usa" data-continent="america" style="top: 25%; left: 20%;">
+              <div class="pin">🇺🇸</div>
+              <div class="country-tooltip">США</div>
+            </div>
+            <div class="country-pin" data-country="canada" data-continent="america" style="top: 18%; left: 18%;">
+              <div class="pin">🇨🇦</div>
+              <div class="country-tooltip">Канада</div>
+            </div>
+            <div class="country-pin" data-country="brazil" data-continent="america" style="top: 55%; left: 30%;">
+              <div class="pin">🇧🇷</div>
+              <div class="country-tooltip">Бразилия</div>
+            </div>
+            <div class="country-pin" data-country="argentina" data-continent="america" style="top: 65%; left: 28%;">
+              <div class="pin">🇦🇷</div>
+              <div class="country-tooltip">Аргентина</div>
+            </div>
+            <div class="country-pin" data-country="chile" data-continent="america" style="top: 62%; left: 25%;">
+              <div class="pin">🇨🇱</div>
+              <div class="country-tooltip">Чили</div>
+            </div>
+            <div class="country-pin" data-country="peru" data-continent="america" style="top: 55%; left: 25%;">
+              <div class="pin">🇵🇪</div>
+              <div class="country-tooltip">Перу</div>
+            </div>
+            <div class="country-pin" data-country="mexico" data-continent="america" style="top: 35%; left: 15%;">
+              <div class="pin">🇲🇽</div>
+              <div class="country-tooltip">Мексика</div>
+            </div>
+
+            <!-- Africa -->
+            <div class="country-pin" data-country="egypt" data-continent="africa" style="top: 38%; left: 58%;">
+              <div class="pin">🇪🇬</div>
+              <div class="country-tooltip">Египет</div>
+            </div>
+            <div class="country-pin" data-country="morocco" data-continent="africa" style="top: 35%; left: 45%;">
+              <div class="pin">🇲🇦</div>
+              <div class="country-tooltip">Марокко</div>
+            </div>
+            <div class="country-pin" data-country="south-africa" data-continent="africa" style="top: 65%; left: 55%;">
+              <div class="pin">🇿🇦</div>
+              <div class="country-tooltip">ЮАР</div>
+            </div>
+            <div class="country-pin" data-country="kenya" data-continent="africa" style="top: 48%; left: 60%;">
+              <div class="pin">🇰🇪</div>
+              <div class="country-tooltip">Кения</div>
+            </div>
+
+            <!-- Oceania -->
+            <div class="country-pin" data-country="australia" data-continent="oceania" style="top: 65%; left: 82%;">
+              <div class="pin">🇦🇺</div>
+              <div class="country-tooltip">Австралия</div>
+            </div>
+            <div class="country-pin" data-country="new-zealand" data-continent="oceania" style="top: 70%; left: 88%;">
+              <div class="pin">🇳🇿</div>
+              <div class="country-tooltip">Новая Зеландия</div>
+            </div>
+
+            <!-- Middle East -->
+            <div class="country-pin" data-country="uae" data-continent="asia" style="top: 40%; left: 62%;">
+              <div class="pin">🇦🇪</div>
+              <div class="country-tooltip">ОАЭ</div>
+            </div>
+
+            <!-- Background world map image -->
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop" alt="Карта мира" class="world-map-bg" id="worldMapBg">
+          </div>
+        </div>
+
+        <!-- Enhanced Country Info Panel -->
+        <div class="country-info" id="countryInfo">
+          <h3 class="country-name">Выберите страну на карте</h3>
+          <p class="country-description">Кликните на любую точку на карте, чтобы узнать подробности о стране и наших турах. Используйте фильтры для поиска по континентам.</p>
+
+          <div class="country-highlights" id="countryHighlights" style="display: none;">
+            <h4>Основные достопримечательности:</h4>
+            <div class="highlights-list" id="highlightsList">
+              <!-- Highlights will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="country-stats" id="countryStats" style="display: none;">
+            <div class="stat-item">
+              <div class="stat-value" id="statPrice">0₽</div>
+              <div class="stat-label">Цена тура</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="statDuration">0 дней</div>
+              <div class="stat-label">Длительность</div>
+            </div>
+          </div>
+
+          <div class="country-details" id="countryDetails" style="display: none;">
+            <div class="country-price" id="countryPrice">от 0₽</div>
+            <div class="country-duration" id="countryDuration">0 дней</div>
+          </div>
+
+          <a href="#" class="cta country-cta" id="countryCta" style="display: none;">Выбрать тур</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Packing Game Section -->
+  <section class="packing-game">
+    <div class="container">
+      <h2 class="subtitle">Игра: Собери чемодан</h2>
+      <p class="about__paragraph">Проверьте свои навыки путешественника! Выберите направление и соберите идеальный чемодан. Перетащите нужные вещи в чемодан и получите оценку своих навыков упаковки.</p>
+
+      <div class="game-container">
+        <div class="game-controls">
+          <select class="destination-select" id="destinationSelect">
+            <option value="">Выберите направление</option>
+            <option value="beach">🏖️ Пляжный отдых</option>
+            <option value="mountain">🏔️ Горы и треккинг</option>
+            <option value="city">🏙️ Городской туризм</option>
+            <option value="winter">❄️ Зимний отдых</option>
+          </select>
+          <button class="game-reset" id="resetGame">🔄 Начать заново</button>
+          <div class="game-score">
+            <div class="score-item">
+              <span>Очки: <span id="score">0</span></span>
+            </div>
+            <div class="score-item">
+              <span>Вещей: <span id="itemCount">0/8</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-area">
+          <div class="items-available">
+            <h3>🎒 Доступные вещи:</h3>
+            <div class="items-grid" id="itemsGrid">
+              <!-- Items will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="suitcase-area">
+            <h3>🧳 Ваш чемодан:</h3>
+            <div class="suitcase" id="suitcase">
+              <div class="suitcase-slots">
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+                <div class="slot"></div>
+              </div>
+            </div>
+            <button class="check-suitcase" id="checkSuitcase">✅ Проверить чемодан</button>
+          </div>
+        </div>
+
+        <div class="game-result" id="gameResult">
+          <!-- Result will be shown here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Travel Tips Section -->
+  <section class="travel-tips">
+    <div class="container">
+      <h2 class="subtitle">Полезные советы путешественникам</h2>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🎒</div>
+          <h3 class="tip-title">Упаковка чемодана</h3>
+          <p class="tip-text">Складывайте одежду рулонами, используйте каждый сантиметр пространства. Тяжелые вещи кладите вниз, хрупкие - в центр.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">📱</div>
+          <h3 class="tip-title">Полезные приложения</h3>
+          <p class="tip-text">Скачайте офлайн-карты, переводчики и приложения для обмена валют перед поездкой. Сохраните важные документы в облаке.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">💰</div>
+          <h3 class="tip-title">Бюджет поездки</h3>
+          <p class="tip-text">Планируйте бюджет заранее, оставляйте 20% на непредвиденные расходы и сувениры. Изучите местные цены.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🏥</div>
+          <h3 class="tip-title">Здоровье в поездке</h3>
+          <p class="tip-text">Соберите аптечку первой помощи, проверьте нужны ли прививки для выбранной страны. Оформите медицинскую страховку.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🌍</div>
+          <h3 class="tip-title">Культурные особенности</h3>
+          <p class="tip-text">Изучите местные обычаи и традиции, основные фразы на местном языке. Уважайте культуру страны.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">📸</div>
+          <h3 class="tip-title">Фотографии в путешествии</h3>
+          <p class="tip-text">Делайте резервные копии фотографий, изучите правила фотосъемки в стране. Не забывайте наслаждаться моментом!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <section class="footer__container container">
+    <nav class="nav nav--footer">
+      <h2 class="footer__title">ПоехалиРус</h2>
+
+      <ul class="nav__link nav__link--footer">
+        <li class="nav__items">
+          <a href="../index.jsp" class="nav__links">Главная</a>
+        </li>
+        <li class="nav__items">
+          <a href="../html/about.html" class="nav__links">О нас</a>
+        </li>
+        <li class="nav__items">
+          <a href="../html/contactos.html" class="nav__links">Контакты</a>
+        </li>
+        <li class="nav__items">
+          <a href="../html/Tours.html" class="nav__links">Туры</a>
+        </li>
+      </ul>
+    </nav>
+
+    <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+      <h2 class="footer__newsletter">Подпишитесь на рассылку</h2>
+      <div class="footer__inputs">
+        <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+        <input type="submit" value="Подписаться" class="footer__submit">
+      </div>
+    </form>
+  </section>
+
+  <section class="footer__copy container">
+    <div class="footer__social">
+      <a href="#" class="footer__icons">
+        <svg class="footer__img" width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer__icons">
+        <svg class="footer__img" width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.

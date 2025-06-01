@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПоехалиРус - Туристическое агентство</title>
+  <link rel="stylesheet" href="../css/tours.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+<header class="hero">
+  <nav class="nav container">
+    <div class="nav__logo">
+      <h2 class="nav__title">ПоехалиРус</h2>
+    </div>
+
+    <ul class="nav__link nav__link--menu">
+      <li class="nav__items">
+        <a href="../html/inicio.html" class="nav__links">Войти</a>
+      </li>
+      <li class="nav__items">
+        <a href="../index.jsp" class="nav__links">Главная</a>
+      </li>
+      <li class="nav__items">
+        <a href="../html/about.html" class="nav__links">О нас</a>
+      </li>
+      <li class="nav__items">
+        <a href="../html/contactos.html" class="nav__links">Контакты</a>
+      </li>
+      <li class="nav__items">
+        <a href="../html/Tours.html" class="nav__links">Туры</a>
+      </li>
+    </ul>
+
+    <svg class="nav__close" id="navClose" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+
+    <div class="nav__menu" id="navToggle">
+      <svg class="nav__img" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </div>
+  </nav>
+
+  <section class="hero__container container">
+    <h1 class="hero__title">Погрузитесь в магию путешествий</h1>
+  </section>
+</header>
+
+<!-- Tours Section -->
+<section id="tours" class="tours">
+  <div class="container">
+    <h2 class="subtitle">Наши лучшие туры по всему миру</h2>
+    <p class="about__paragraph">
+      Откройте для себя 40 удивительных направлений! От экзотических островов до древних городов, от горных вершин
+      до тропических пляжей - мы подготовили для вас незабываемые приключения.
+    </p>
+
+    <div class="tours__grid">
+      <!-- Tour 1 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=300&h=200&fit=crop" alt="Япония" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Япония</h3>
+          <p class="tour__description">Откройте для себя удивительную культуру Страны восходящего солнца</p>
+          <ul class="tour__highlights">
+            <li>Храмы Киото</li>
+            <li>Гора Фудзи</li>
+            <li>Токийские небоскребы</li>
+            <li>Традиционная кухня</li>
+          </ul>
+          <div class="tour__price">от 85,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 2 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=300&h=200&fit=crop" alt="Италия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Италия</h3>
+          <p class="tour__description">Погрузитесь в историю, искусство и невероятную кухню</p>
+          <ul class="tour__highlights">
+            <li>Колизей в Риме</li>
+            <li>Каналы Венеции</li>
+            <li>Тосканские виноградники</li>
+            <li>Пицца и паста</li>
+          </ul>
+          <div class="tour__price">от 65,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 3 -->
+      <div class="tour__card">
+        <img src="https://triplook.me/media/countries/photo/b/e/n6.jpg" alt="Франция" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Франция</h3>
+          <p class="tour__description">Романтика Парижа и очарование французской провинции</p>
+          <ul class="tour__highlights">
+            <li>Эйфелева башня</li>
+            <li>Лувр</li>
+            <li>Замки Луары</li>
+            <li>Французские вина</li>
+          </ul>
+          <div class="tour__price">от 70,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 4 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=300&h=200&fit=crop" alt="Испания" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Испания</h3>
+          <p class="tour__description">Страстное фламенко, архитектура Гауди и солнечные пляжи</p>
+          <ul class="tour__highlights">
+            <li>Саграда Фамилия</li>
+            <li>Музей Прадо</li>
+            <li>Коста-дель-Соль</li>
+            <li>Тапас и паэлья</li>
+          </ul>
+          <div class="tour__price">от 55,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 5 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=300&h=200&fit=crop" alt="Греция" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Греция</h3>
+          <p class="tour__description">Колыбель цивилизации с кристально чистыми водами</p>
+          <ul class="tour__highlights">
+            <li>Акрополь</li>
+            <li>Острова Санторини</li>
+            <li>Дельфы</li>
+            <li>Греческая кухня</li>
+          </ul>
+          <div class="tour__price">от 60,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 6 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=300&h=200&fit=crop" alt="Турция" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Турция</h3>
+          <p class="tour__description">Мост между Европой и Азией с богатой историей</p>
+          <ul class="tour__highlights">
+            <li>Собор Святой Софии</li>
+            <li>Каппадокия</li>
+            <li>Памуккале</li>
+            <li>Турецкие бани</li>
+          </ul>
+          <div class="tour__price">от 45,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 7 -->
+      <div class="tour__card">
+        <img src="https://smoktravel.by/upload/resize_cache/iblock/14d/723_435_201a9461d51526113595f057e89280f5a/egypt.jpg" alt="Египет" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Египет</h3>
+          <p class="tour__description">Древние пирамиды и сокровища фараонов</p>
+          <ul class="tour__highlights">
+            <li>Пирамиды Гизы</li>
+            <li>Долина царей</li>
+            <li>Красное море</li>
+            <li>Круиз по Нилу</li>
+          </ul>
+          <div class="tour__price">от 50,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 8 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=300&h=200&fit=crop" alt="ОАЭ" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">ОАЭ</h3>
+          <p class="tour__description">Футуристические города в сердце пустыни</p>
+          <ul class="tour__highlights">
+            <li>Бурдж-Халифа</li>
+            <li>Пальмовые острова</li>
+            <li>Сафари в пустыне</li>
+            <li>Золотые рынки</li>
+          </ul>
+          <div class="tour__price">от 75,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 9 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Таиланд" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Таиланд</h3>
+          <p class="tour__description">Тропический рай с древними храмами</p>
+          <ul class="tour__highlights">
+            <li>Храмы Бангкока</li>
+            <li>Острова Пхукет</li>
+            <li>Плавучие рынки</li>
+            <li>Тайский массаж</li>
+          </ul>
+          <div class="tour__price">от 55,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 10 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=300&h=200&fit=crop" alt="Китай" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Китай</h3>
+          <p class="tour__description">Великая стена и современные мегаполисы</p>
+          <ul class="tour__highlights">
+            <li>Великая китайская стена</li>
+            <li>Запретный город</li>
+            <li>Терракотовая армия</li>
+            <li>Шанхай</li>
+          </ul>
+          <div class="tour__price">от 80,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 11 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=300&h=200&fit=crop" alt="Индия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Индия</h3>
+          <p class="tour__description">Красочная культура и духовные традиции</p>
+          <ul class="tour__highlights">
+            <li>Тадж-Махал</li>
+            <li>Гоа</li>
+            <li>Раджастан</li>
+            <li>Аюрведа</li>
+          </ul>
+          <div class="tour__price">от 65,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 12 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=300&h=200&fit=crop" alt="Мальдивы" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Мальдивы</h3>
+          <p class="tour__description">Райские острова в Индийском океане</p>
+          <ul class="tour__highlights">
+            <li>Водные виллы</li>
+            <li>Коралловые рифы</li>
+            <li>Дайвинг</li>
+            <li>Спа-процедуры</li>
+          </ul>
+          <div class="tour__price">от 120,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 13 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=300&h=200&fit=crop" alt="Бразилия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Бразилия</h3>
+          <p class="tour__description">Карнавал, пляжи Копакабаны и тропические леса</p>
+          <ul class="tour__highlights">
+            <li>Статуя Христа</li>
+            <li>Пляж Копакабана</li>
+            <li>Амазонка</li>
+            <li>Карнавал в Рио</li>
+          </ul>
+          <div class="tour__price">от 90,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 14 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=300&h=200&fit=crop" alt="Аргентина" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Аргентина</h3>
+          <p class="tour__description">Танго, стейки и ледники Патагонии</p>
+          <ul class="tour__highlights">
+            <li>Буэнос-Айрес</li>
+            <li>Водопады Игуасу</li>
+            <li>Патагония</li>
+            <li>Винодельни Мендосы</li>
+          </ul>
+          <div class="tour__price">от 95,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 15 -->
+      <div class="tour__card">
+        <img src="https://chiletravelmag.ru/wp-content/uploads/2017/07/Santiago-Chile.jpg" alt="Чили" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Чили</h3>
+          <p class="tour__description">От пустыни Атакама до ледников Патагонии</p>
+          <ul class="tour__highlights">
+            <li>Пустыня Атакама</li>
+            <li>Остров Пасхи</li>
+            <li>Винные долины</li>
+            <li>Торрес-дель-Пайне</li>
+          </ul>
+          <div class="tour__price">от 100,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 16 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=300&h=200&fit=crop" alt="Перу" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Перу</h3>
+          <p class="tour__description">Мачу-Пикчу и наследие инков</p>
+          <ul class="tour__highlights">
+            <li>Мачу-Пикчу</li>
+            <li>Куско</li>
+            <li>Озеро Титикака</li>
+            <li>Линии Наски</li>
+          </ul>
+          <div class="tour__price">от 85,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 17 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=300&h=200&fit=crop" alt="Мексика" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Мексика</h3>
+          <p class="tour__description">Пирамиды майя и карибские пляжи</p>
+          <ul class="tour__highlights">
+            <li>Чичен-Ица</li>
+            <li>Канкун</li>
+            <li>Мехико</li>
+            <li>Текила и мескаль</li>
+          </ul>
+          <div class="tour__price">от 70,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 18 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=300&h=200&fit=crop" alt="США" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">США</h3>
+          <p class="tour__description">От небоскребов Нью-Йорка до Гранд-Каньона</p>
+          <ul class="tour__highlights">
+            <li>Статуя Свободы</li>
+            <li>Гранд-Каньон</li>
+            <li>Лас-Вегас</li>
+            <li>Голливуд</li>
+          </ul>
+          <div class="tour__price">от 110,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 19 -->
+      <div class="tour__card">
+        <img src="https://www.redhairtravel.com/wp-content/uploads/2022/06/2.jpg.webp" alt="Канада" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Канада</h3>
+          <p class="tour__description">Ниагарский водопад и нетронутая природа</p>
+          <ul class="tour__highlights">
+            <li>Ниагарский водопад</li>
+            <li>Банф</li>
+            <li>Торонто</li>
+            <li>Северное сияние</li>
+          </ul>
+          <div class="tour__price">от 105,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 20 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Австралия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Австралия</h3>
+          <p class="tour__description">Уникальная фауна и Большой Барьерный риф</p>
+          <ul class="tour__highlights">
+            <li>Сиднейская опера</li>
+            <li>Большой Барьерный риф</li>
+            <li>Улуру</li>
+            <li>Кенгуру и коалы</li>
+          </ul>
+          <div class="tour__price">от 130,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 21 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&h=200&fit=crop" alt="Новая Зеландия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Новая Зеландия</h3>
+          <p class="tour__description">Фьорды, хоббитоны и экстремальные виды спорта</p>
+          <ul class="tour__highlights">
+            <li>Милфорд-Саунд</li>
+            <li>Хоббитон</li>
+            <li>Квинстаун</li>
+            <li>Ледники</li>
+          </ul>
+          <div class="tour__price">от 125,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 22 -->
+      <div class="tour__card">
+        <img src="https://safaribooking.ru/wp-content/uploads/2020/01/Gosudarstvo-YUAR.jpg" alt="ЮАР" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">ЮАР</h3>
+          <p class="tour__description">Сафари, виноградники и мыс Доброй Надежды</p>
+          <ul class="tour__highlights">
+            <li>Сафари в Крюгере</li>
+            <li>Кейптаун</li>
+            <li>Винные фермы</li>
+            <li>Пингвины</li>
+          </ul>
+          <div class="tour__price">от 90,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 23 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=300&h=200&fit=crop" alt="Кения" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Кения</h3>
+          <p class="tour__description">Великая миграция и африканское сафари</p>
+          <ul class="tour__highlights">
+            <li>Масаи-Мара</li>
+            <li>Килиманджаро</li>
+            <li>Найроби</li>
+            <li>Племена масаи</li>
+          </ul>
+          <div class="tour__price">от 95,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 24 -->
+      <div class="tour__card">
+        <img src="https://cdn2.tu-tu.ru/image/pagetree_node_data/1/b87843fa4aa938b88539d32daa2373db/" alt="Марокко" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Марокко</h3>
+          <p class="tour__description">Сказочные рынки и пустыня Сахара</p>
+          <ul class="tour__highlights">
+            <li>Марракеш</li>
+            <li>Фес</li>
+            <li>Пустыня Сахара</li>
+            <li>Касабланка</li>
+          </ul>
+          <div class="tour__price">от 60,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 25 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&h=200&fit=crop" alt="Норвегия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Норвегия</h3>
+          <p class="tour__description">Фьорды, северное сияние и полуночное солнце</p>
+          <ul class="tour__highlights">
+            <li>Гейрангер-фьорд</li>
+            <li>Северное сияние</li>
+            <li>Лофотенские острова</li>
+            <li>Берген</li>
+          </ul>
+          <div class="tour__price">от 85,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 26 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Исландия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Исландия</h3>
+          <p class="tour__description">Гейзеры, водопады и ледники</p>
+          <ul class="tour__highlights">
+            <li>Голубая лагуна</li>
+            <li>Гейзер Гейсир</li>
+            <li>Водопад Гульфосс</li>
+            <li>Рейкьявик</li>
+          </ul>
+          <div class="tour__price">от 80,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 27 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=300&h=200&fit=crop" alt="Швеция" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Швеция</h3>
+          <p class="tour__description">Стокгольм, ИКЕА и северная природа</p>
+          <ul class="tour__highlights">
+            <li>Стокгольм</li>
+            <li>Гётеборг</li>
+            <li>Лапландия</li>
+            <li>Ледяной отель</li>
+          </ul>
+          <div class="tour__price">от 75,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 28 -->
+      <div class="tour__card">
+        <img src="https://smoktravel.by/upload/resize_cache/iblock/f45/723_435_201a9461d51526113595f057e89280f5a/finlandia_9_.jpg" alt="Финляндия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Финляндия</h3>
+          <p class="tour__description">Сауны, северное сияние и Санта-Клаус</p>
+          <ul class="tour__highlights">
+            <li>Хельсинки</li>
+            <li>Лапландия</li>
+            <li>Сауны</li>
+            <li>Деревня Санты</li>
+          </ul>
+          <div class="tour__price">от 70,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 29 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=300&h=200&fit=crop" alt="Дания" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Дания</h3>
+          <p class="tour__description">Копенгаген, Русалочка и хюгге</p>
+          <ul class="tour__highlights">
+            <li>Копенгаген</li>
+            <li>Замки</li>
+            <li>Тиволи</li>
+            <li>Датский дизайн</li>
+          </ul>
+          <div class="tour__price">от 65,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 30 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=300&h=200&fit=crop" alt="Нидерланды" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Нидерланды</h3>
+          <p class="tour__description">Тюльпаны, ветряные мельницы и каналы Амстердама</p>
+          <ul class="tour__highlights">
+            <li>Амстердам</li>
+            <li>Кёкенхоф</li>
+            <li>Ветряные мельницы</li>
+            <li>Музеи</li>
+          </ul>
+          <div class="tour__price">от 60,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 31 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop" alt="Бельгия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Бельгия</h3>
+          <p class="tour__description">Шоколад, вафли и средневековые города</p>
+          <ul class="tour__highlights">
+            <li>Брюссель</li>
+            <li>Брюгге</li>
+            <li>Шоколадные фабрики</li>
+            <li>Пиво</li>
+          </ul>
+          <div class="tour__price">от 55,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 32 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Швейцария" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Швейцария</h3>
+          <p class="tour__description">Альпы, часы и шоколад</p>
+          <ul class="tour__highlights">
+            <li>Маттерхорн</li>
+            <li>Юнгфрауйох</li>
+            <li>Женевское озеро</li>
+            <li>Швейцарские часы</li>
+          </ul>
+          <div class="tour__price">от 90,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 33 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=300&h=200&fit=crop" alt="Австрия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Австрия</h3>
+          <p class="tour__description">Вена, Моцарт и альпийские пейзажи</p>
+          <ul class="tour__highlights">
+            <li>Вена</li>
+            <li>Зальцбург</li>
+            <li>Халльштатт</li>
+            <li>Классическая музыка</li>
+          </ul>
+          <div class="tour__price">от 70,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 34 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1541849546-216549ae216d?w=300&h=200&fit=crop" alt="Чехия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Чехия</h3>
+          <p class="tour__description">Прага - город ста башен</p>
+          <ul class="tour__highlights">
+            <li>Пражский град</li>
+            <li>Карлов мост</li>
+            <li>Чешское пиво</li>
+            <li>Старый город</li>
+          </ul>
+          <div class="tour__price">от 45,000 ₽</div>
+        </div>
+      </div>
+
+
+      <!-- Tour 36 -->
+      <div class="tour__card">
+        <img src="https://tripwithlove.com/data/objects/475/images/5b2e3709b3a77.jpg" alt="Польша" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Польша</h3>
+          <p class="tour__description">Краков, Варшава и соляные шахты</p>
+          <ul class="tour__highlights">
+            <li>Краков</li>
+            <li>Варшава</li>
+            <li>Соляные шахты</li>
+            <li>Мазурские озера</li>
+          </ul>
+          <div class="tour__price">от 35,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 37 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=300&h=200&fit=crop" alt="Хорватия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Хорватия</h3>
+          <p class="tour__description">Адриатическое побережье и национальные парки</p>
+          <ul class="tour__highlights">
+            <li>Дубровник</li>
+            <li>Плитвицкие озера</li>
+            <li>Сплит</li>
+            <li>Истрия</li>
+          </ul>
+          <div class="tour__price">от 55,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 38 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=300&h=200&fit=crop" alt="Португалия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Португалия</h3>
+          <p class="tour__description">Лиссабон, портвейн и атлантическое побережье</p>
+          <ul class="tour__highlights">
+            <li>Лиссабон</li>
+            <li>Порту</li>
+            <li>Синтра</li>
+            <li>Азорские острова</li>
+          </ul>
+          <div class="tour__price">от 50,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 39 -->
+      <div class="tour__card">
+        <img src="https://cdn2.tu-tu.ru/image/pagetree_node_data/1/f1283c85a0f0cb1e7505e386e9c843c5/" alt="Ирландия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Ирландия</h3>
+          <p class="tour__description">Изумрудный остров с богатой культурой</p>
+          <ul class="tour__highlights">
+            <li>Дублин</li>
+            <li>Утесы Мохер</li>
+            <li>Кольцо Керри</li>
+            <li>Ирландские пабы</li>
+          </ul>
+          <div class="tour__price">от 65,000 ₽</div>
+        </div>
+      </div>
+
+      <!-- Tour 40 -->
+      <div class="tour__card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Шотландия" class="tour__image">
+        <div class="tour__content">
+          <h3 class="tour__country">Шотландия</h3>
+          <p class="tour__description">Замки, виски и горные пейзажи</p>
+          <ul class="tour__highlights">
+            <li>Эдинбург</li>
+            <li>Лох-Несс</li>
+            <li>Высокогорье</li>
+            <li>Шотландский виски</li>
+          </ul>
+          <div class="tour__price">от 70,000 ₽</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <section class="footer__container container">
+    <nav class="nav nav--footer">
+      <h2 class="footer__title">ПоехалиРус</h2>
+
+      <ul class="nav__link nav__link--footer">
+        <li class="nav__items">
+          <a href="../index.jsp" class="nav__links">Главная</a>
+        </li>
+        <li class="nav__items">
+          <a href="../html/about.html" class="nav__links">О нас</a>
+        </li>
+        <li class="nav__items">
+          <a href="../html/contactos.html" class="nav__links">Контакты</a>
+        </li>
+        <li class="nav__items">
+          <a href="../html/Tours.html" class="nav__links">Туры</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+      <h2 class="footer__newsletter">Подпишитесь на рассылку</h2>
+      <div class="footer__inputs">
+        <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+        <input type="submit" value="Подписаться" class="footer__submit">
+      </div>
+    </form>
+  </section>
+
+  <section class="footer__copy container">
+    <div class="footer__social">
+      <a href="#" class="footer__icons">
+        <svg class="footer__img" width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer__icons">
+        <svg class="footer__img" width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer__icons">
+        <svg class="footer__img" width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+    </div>
+
+    <h3 class="footer__copyright">Все права защищены &copy; ПоехалиРус</h3>
+  </section>
+</footer>
+
+<script>
+  // Mobile menu functionality
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  const navClose = document.getElementById('navClose');
+
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.add('nav__link--show');
+    });
+  }
+
+  if (navClose) {
+    navClose.addEventListener('click', () => {
+      navMenu.classList.remove('nav__link--show');
+    });
+  }
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('.nav__links').forEach(n => n.addEventListener('click', () => {
+    navMenu.classList.remove('nav__link--show');
+  }));
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>

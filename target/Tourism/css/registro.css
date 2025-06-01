@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    padding: 80px 0;
+    background-image: linear-gradient(to top, #001a49 0%, #696871 100%);
+    background-color: #001a49;
+    display: flex;
+}
+
+.main {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.472), rgba(255, 255, 255, 0.365));
+    overflow: hidden;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main__figure {
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.main__img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.main__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.main__form {
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+}
+
+.main__input {
+    width: 100%;
+    max-width: 500px;
+    outline: none;
+    border: none;
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: .6em;
+}
+
+.main__input--send {
+    background-color: #DC3F31;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main__title {
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.main__paragraph {
+    margin-top: .3em;
+    text-align: center;
+    color: #fff;
+}
+
+.main__link {
+    color: #DC3F31;
+    text-decoration: underline;
+}
+
+.main__link:hover {
+    color: #fff;
+}
+
+
+.main__form input[type="password"] {
+    background: #f9f9f9;
+}
+
